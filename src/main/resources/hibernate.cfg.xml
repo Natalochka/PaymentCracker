@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Related to the connection START -->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@//localhost:1521/xe</property>
+        <property name="connection.user">PaymentCracker</property>
+        <property name="connection.password">PaymentCracker</property>
+        <!-- Related to the connection END -->
+
+        <!-- Related to hibernate properties START -->
+        <!--<property name="show_sql">true</property>-->
+        <property name="hibernate.dialeсt">org.hibernate.dialect.Oracle10Dialect </property>
+        <property name="hbm2ddl.auto">update</property>
+        <!--<property name="format_sql">true</property>-->
+        <!--<property name="use_sql_comments">true</property>-->
+        <!-- Related to hibernate properties END -->
+
+        <mapping class = "com.payment_cracker.api.dao.basic_level.basic_entities.Attributes"></mapping>
+        <mapping class = "com.payment_cracker.api.dao.basic_level.basic_entities.Objects"></mapping>
+        <mapping class = "com.payment_cracker.api.dao.basic_level.basic_entities.ObjReference"></mapping>
+        <mapping class = "com.payment_cracker.api.dao.basic_level.basic_entities.ObjType"></mapping>
+        <mapping class = "com.payment_cracker.api.dao.basic_level.basic_entities.Parameters"></mapping>
+    </session-factory>
+</hibernate-configuration>

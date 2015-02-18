@@ -1,0 +1,28 @@
+html, body {
+    /*background-color: azure;*/
+    height: 75%;
+    background-image: url("../../background.jpg");
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    font: 13pt Segoe Script;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table.form_holder1 {
+    border-radius: 18px;
+    font: 15pt Segoe Script;
+    background-color: steelblue;
+}
+
+table.form_holder1 thead {
+    background-color: #19669a;
+    color: white;
+    font-weight: bold;
+}
